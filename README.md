@@ -3,12 +3,18 @@ Vue + Vuex - User Registration and Login Tutorial & Example
 
 To see a demo and further details go to http://jasonwatmore.com/post/2018/07/14/vue-vuex-user-registration-and-login-tutorial-example
 
-# fullstackwebapp
+# full stack webapp
 This is a full stack web app that consists of frontend (vue), backend API (.net core), and a SQL DB.
 
 You can deploy this solution on Azure PaaS services. Follow the steps bellow:
 
-1. Create a two Azure App Services that will be used for front and backend apps
+1. Create a two Azure App Services that will be used for front and backend apps as follows:
+    > #### Frontend: 
+      - Create an App Service with **Node 16/18 LTS** as Runtime stack.
+      - Once created, go to app service --> configuration --> general settings, and put this command in the **startup command** box: `pm2 serve /home/site/wwwroot --no-daemon --spa` and save
+
+    > #### Backend API:
+      - Create an App Service with **.NET 6/7** as Runtime stack.
 2. Create an [Azure SQL DB](https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal)
 3. Clone the repo locally by running the command:
 ```
